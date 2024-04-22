@@ -21,10 +21,6 @@
 			<text class="cell-tit">清除缓存</text>
 			<text class="cell-more yticon icon-you"></text>
 		</view>
-		<view class="list-cell b-b" @click="navToOuter('https://github.com/macrozheng/mall')" hover-class="cell-hover" :hover-stay-time="50">
-			<text class="cell-tit">关于mall-app-web</text>
-			<text class="cell-more yticon icon-you"></text>
-		</view>
 		<view class="list-cell">
 			<text class="cell-tit">检查更新</text>
 			<text class="cell-tip">当前版本 1.0.0</text>
