@@ -1,4 +1,169 @@
+<template>
+	<view class="container">
+		<!-- 小程序头部兼容 -->
+		<!-- #ifdef MP -->
+		<view class="mp-search-box">
+			<input class="ser-input" type="text" value="输入关键字搜索" disabled />
+		</view>
+		<!-- #endif -->
 
+		<!-- 头部轮播 -->
+		<view class="carousel-section">
+			<!-- 标题栏和状态栏占位符 -->
+			<view class="titleNview-placing"></view>
+			<!-- 背景色区域 -->
+			<view class="titleNview-background" :style="{backgroundColor:titleNViewBackground}"></view>
+			<swiper class="carousel" circular @change="swiperChange">
+				<swiper-item v-for="(item, index) in advertiseList" :key="index" class="carousel-item" @click="navToAdvertisePage(item)">
+					<image :src="item.pic" />
+				</swiper-item>
+			</swiper>
+			<!-- 自定义swiper指示器 -->
+			<view class="swiper-dots">
+				<text class="num">{{swiperCurrent+1}}</text>
+				<text class="sign">/</text>
+				<text class="num">{{swiperLength}}</text>
+			</view>
+		</view>
+		<!-- 头部功能区 -->
+		<view class="cate-section">
+			<view class="cate-item">
+				<image src="/static/temp/c3.png"></image>
+				<text>专题</text>
+			</view>
+			<view class="cate-item">
+				<image src="/static/temp/c5.png"></image>
+				<text>话题</text>
+			</view>
+			<view class="cate-item">
+				<image src="/static/temp/c6.png"></image>
+				<text>优选</text>
+			</view>
+			<view class="cate-item">
+				<image src="/static/temp/c7.png"></image>
+				<text>特惠</text>
+			</view>
+		</view>
+
+		<!-- 品牌制造商直供 -->
+		<view class="f-header m-t" @click="navToRecommendBrandPage()">
+			<image src="/static/icon_home_brand.png"></image>
+			<view class="tit-box">
+				<text class="tit">品牌制造商直供</text>
+				<text class="tit2">工厂直达消费者，剔除品牌溢价</text>
+			</view>
+			<text class="yticon icon-you"></text>
+		</view>
+
+		<view class="guess-section">
+			<view v-for="(item, index) in brandList" :key="index" class="guess-item" @click="navToBrandDetailPage(item)">
+				<view class="image-wrapper-brand">
+					<image :src="item.logo" mode="aspectFit"></image>
+				</view>
+				<text class="title clamp">{{item.name}}</text>
+				<text class="title2">商品数量：{{item.productCount}}</text>
+			</view>
+		</view>
+
+		<!-- 秒杀专区 -->
+		<view class="f-header m-t" v-if="homeFlashPromotion!==null">
+			<image src="/static/icon_flash_promotion.png"></image>
+			<view class="tit-box">
+				<text class="tit">秒杀专区</text>
+				<text class="tit2">下一场 {{homeFlashPromotion.nextStartTime | formatTime}} 开始</text>
+			</view>
+			<view class="tit-box">
+				<text class="tit2" style="text-align: right;">本场结束剩余：</text>
+				<view style="text-align: right;">
+					<text class="hour timer">{{cutDownTime.endHour}}</text>
+					<text>:</text>
+					<text class="minute timer">{{cutDownTime.endMinute}}</text>
+					<text>:</text>
+					<text class="second timer">{{cutDownTime.endSecond}}</text>
+				</view>
+			</view>
+			<text class="yticon icon-you" v-show="false"></text>
+		</view>
+
+		<view class="guess-section">
+			<view v-for="(item, index) in homeFlashPromotion.productList" :key="index" class="guess-item" @click="navToDetailPage(item)">
+				<view class="image-wrapper">
+					<image :src="item.pic" mode="aspectFill"></image>
+				</view>
+				<text class="title clamp">{{item.name}}</text>
+				<text class="title2 clamp">{{item.subTitle}}</text>
+				<text class="price">￥{{item.price}}</text>
+			</view>
+		</view>
+
+		<!-- 新鲜好物 -->
+		<view class="f-header m-t" @click="navToNewProudctListPage()">
+			<image src="/static/icon_new_product.png"></image>
+			<view class="tit-box">
+				<text class="tit">新鲜好物</text>
+				<text class="tit2">为你寻觅世间好物</text>
+			</view>
+			<text class="yticon icon-you"></text>
+		</view>
+		<view class="seckill-section">
+			<scroll-view class="floor-list" scroll-x>
+				<view class="scoll-wrapper">
+					<view v-for="(item, index) in newProductList" :key="index" class="floor-item" @click="navToDetailPage(item)">
+						<image :src="item.pic" mode="aspectFill"></image>
+						<text class="title clamp">{{item.name}}</text>
+						<text class="title2 clamp">{{item.subTitle}}</text>
+						<text class="price">￥{{item.price}}</text>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+
+		<!-- 人气推荐楼层 -->
+		<view class="f-header m-t" @click="navToHotProudctListPage()">
+			<image src="/static/icon_hot_product.png"></image>
+			<view class="tit-box">
+				<text class="tit">人气推荐</text>
+				<text class="tit2">大家都赞不绝口的</text>
+			</view>
+			<text class="yticon icon-you"></text>
+		</view>
+
+		<view class="hot-section">
+			<view v-for="(item, index) in hotProductList" :key="index" class="guess-item" @click="navToDetailPage(item)">
+				<view class="image-wrapper">
+					<image :src="item.pic" mode="aspectFill"></image>
+				</view>
+				<view class="txt">
+					<text class="title clamp">{{item.name}}</text>
+					<text class="title2">{{item.subTitle}}</text>
+					<text class="price">￥{{item.price}}</text>
+				</view>
+			</view>
+		</view>
+
+		<!-- 猜你喜欢-->
+		<view class="f-header m-t">
+			<image src="/static/icon_recommend_product.png"></image>
+			<view class="tit-box">
+				<text class="tit">猜你喜欢</text>
+				<text class="tit2">你喜欢的都在这里了</text>
+			</view>
+			<text class="yticon icon-you" v-show="false"></text>
+		</view>
+
+		<view class="guess-section">
+			<view v-for="(item, index) in recommendProductList" :key="index" class="guess-item" @click="navToDetailPage(item)">
+				<view class="image-wrapper">
+					<image :src="item.pic" mode="aspectFill"></image>
+				</view>
+				<text class="title clamp">{{item.name}}</text>
+				<text class="title2 clamp">{{item.subTitle}}</text>
+				<text class="price">￥{{item.price}}</text>
+			</view>
+		</view>
+		<uni-load-more :status="loadingType"></uni-load-more>
+	</view>
+</template>
 
 <script>
 	import {
