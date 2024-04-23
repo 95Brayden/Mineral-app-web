@@ -3,7 +3,7 @@
 		<!-- 小程序头部兼容 -->
 		<!-- #ifdef MP -->
 		<view class="mp-search-box">
-			<input class="ser-input" type="text" value="输入关键字搜索" disabled />
+			<input class="ser-input" type="text" value="请输入关键字搜索" disabled />
 		</view>
 		<!-- #endif -->
 
@@ -29,19 +29,19 @@
 		<view class="cate-section">
 			<view class="cate-item">
 				<image src="/static/temp/c3.png"></image>
-				<text>专题</text>
+				<text>购买</text>
 			</view>
 			<view class="cate-item">
 				<image src="/static/temp/c5.png"></image>
-				<text>话题</text>
+				<text>回收</text>
 			</view>
 			<view class="cate-item">
 				<image src="/static/temp/c6.png"></image>
-				<text>优选</text>
+				<text>拍卖</text>
 			</view>
 			<view class="cate-item">
 				<image src="/static/temp/c7.png"></image>
-				<text>特惠</text>
+				<text>分类</text>
 			</view>
 		</view>
 
@@ -49,8 +49,8 @@
 		<view class="f-header m-t" @click="navToRecommendBrandPage()">
 			<image src="/static/icon_home_brand.png"></image>
 			<view class="tit-box">
-				<text class="tit">品牌制造商直供</text>
-				<text class="tit2">工厂直达消费者，剔除品牌溢价</text>
+				<text class="tit">地大直供</text>
+				<text class="tit2">鉴定保障</text>
 			</view>
 			<text class="yticon icon-you"></text>
 		</view>
