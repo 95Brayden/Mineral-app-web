@@ -5,7 +5,7 @@
 			"path": "pages/index/index",
 			"style": {
 				// #ifdef MP 
-				"navigationBarTitleText": "Mall商城",
+				"navigationBarTitleText": "Mineral云端矿场",
 				//"navigationStyle": "custom",
 				// #endif 
 				"enablePullDownRefresh": true,
@@ -15,7 +15,7 @@
 						"searchInput": {
 							"backgroundColor": "rgba(231, 231, 231,.7)",
 							"borderRadius": "16px",
-							"placeholder": "请输入商品 如：手机",
+							"placeholder": "请输入商品 如：翡翠、黄金",
 							"disabled": true,
 							"placeholderColor": "#606266"
 						},
