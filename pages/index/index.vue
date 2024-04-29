@@ -26,7 +26,23 @@
 			</view>
 		</view>
 		<!-- 头部功能区 -->
-		
+		<view class="cate-section">
+			<view class="cate-item">
+				<image src="/static/temp/c3.png"></image>
+				<text>购买</text>
+			</view>
+			<view class="cate-item">
+				<image src="/static/temp/c5.png"></image>
+				<text>回收</text>
+			</view>
+			<view class="cate-item">
+				<image src="/static/temp/c6.png"></image>
+				<text>拍卖</text>
+			</view>
+			<view class="cate-item">
+				<image src="/static/temp/c7.png"></image>
+				<text>分类</text>
+			</view>
 		</view>
 
 		<!-- 品牌制造商直供 -->
