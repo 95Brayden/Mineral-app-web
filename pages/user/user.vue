@@ -20,7 +20,7 @@
 					<text class="yticon icon-iLinkapp-"></text>
 					黄金会员
 				</view>
-				<text class="e-m">mall移动端商城</text>
+				<text class="e-m">Mineral云端矿场</text>
 				<text class="e-b">黄金及以上会员可享有会员价优惠商品。</text>
 			</view>
 		</view>
