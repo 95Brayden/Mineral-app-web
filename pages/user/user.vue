@@ -1,56 +1,7 @@
 <template>  
     <view class="container">  
 		
-		<view class="user-section">
-			<image class="bg" src="/static/user-bg.jpg"></image>
-			<view class="user-info-box">
-				<view class="portrait-box">
-					<image class="portrait" :src="userInfo.icon || '/static/missing-face.png'"></image>
-				</view>
-				<view class="info-box">
-					<text class="username">{{userInfo.nickname || '游客'}}</text>
-				</view>
-			</view>
-			<view class="vip-card-box">
-				<image class="card-bg" src="/static/vip-card-bg.png" mode=""></image>
-				<view class="b-btn">
-					立即开通
-				</view>
-				<view class="tit">
-					<text class="yticon icon-iLinkapp-"></text>
-					黄金会员
-				</view>
-				<text class="e-m">Mineral云端矿场</text>
-				<text class="e-b">黄金及以上会员可享有会员价优惠商品。</text>
-			</view>
-		</view>
 		
-		<view 
-			class="cover-container"
-			:style="[{
-				transform: coverTransform,
-				transition: coverTransition
-			}]"
-			@touchstart="coverTouchstart"
-			@touchmove="coverTouchmove"
-			@touchend="coverTouchend"
-		>
-			<image class="arc" src="/static/arc.png"></image>
-			
-			<view class="tj-sction">
-				<view class="tj-item">
-					<text class="num">{{userInfo.integration || '暂无'}}</text>
-					<text>积分</text>
-				</view>
-				<view class="tj-item">
-					<text class="num">{{userInfo.growth || '暂无'}}</text>
-					<text>成长值</text>
-				</view>
-				<view class="tj-item" @click="navTo('/pages/coupon/couponList')">
-					<text class="num">{{couponCount || '暂无'}}</text>
-					<text>优惠券</text>
-				</view>
-			</view>
 			<!-- 订单 -->
 			<view class="order-section">
 				<view class="order-item" @click="navTo('/pages/order/order?state=0')" hover-class="common-hover"  :hover-stay-time="50">
