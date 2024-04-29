@@ -260,6 +260,25 @@
 					}
 				}
 			}
+		},
+		{
+			"path" : "pages/user/evaluation",
+			"style" : 
+			{
+				"navigationBarTitleText" : "我的评价",
+				"enablePullDownRefresh" : true,
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "清空",
+							"fontSize": "16",
+							"color": "#303133",
+							"width": "46px",
+							"background": "rgba(0,0,0,0)"
+						}]
+					}
+				}
+			}
 		}
 	],
 	"globalStyle": {
