@@ -34,7 +34,12 @@
 			</view>
 			<!-- 底部菜单栏 -->
 			<view class="action-section">
-				
+				<view class="checkbox">
+					<image :src="allChecked?'/static/selected.png':'/static/select.png'" mode="aspectFit" @click="check('all')"></image>
+					<view class="clear-btn" :class="{show: allChecked}" @click="clearCart">
+						清空
+					</view>
+				</view>
 				<view class="total-box">
 					<text class="price">¥{{total}}元</text>
 				</view>
