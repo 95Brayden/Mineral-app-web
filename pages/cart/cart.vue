@@ -176,7 +176,25 @@
 					})
 				});
 			},
-			
+			//计算总价
+			calcTotal() {
+				let list = this.cartList;
+				if (list.length === 0) {
+					this.empty = true;
+					return;
+				}
+				let total = 0;
+				let checked = true;
+				list.forEach(item => {
+					if (item.checked === true) {
+						total += item.price * item.quantity;
+					} else if (checked === true) {
+						checked = false;
+					}
+				})
+				this.allChecked = checked;
+				this.total = Number(total.toFixed(2));
+			},
 			//创建订单
 			createOrder() {
 				let list = this.cartList;
