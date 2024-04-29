@@ -13,7 +13,25 @@
 			</view>
 		</view>
 		<view v-else>
-			
+			<!-- 列表 -->
+			<view class="cart-list">
+				<block v-for="(item, index) in cartList" :key="item.id">
+					<view class="cart-item" :class="{'b-b': index!==cartList.length-1}">
+						<view class="image-wrapper">
+							<image :src="item.productPic" :class="[item.loaded]" mode="aspectFill" lazy-load @load="onImageLoad('cartList', index)"
+							 @error="onImageError('cartList', index)"></image>
+							<view class="yticon icon-xuanzhong2 checkbox" :class="{checked: item.checked}" @click="check('item', index)"></view>
+						</view>
+						<view class="item-right">
+							<text class="clamp title">{{item.productName}}</text>
+							<text class="attr">{{item.spDataStr}}</text>
+							<text class="price">¥{{item.price}}</text>
+							<uni-number-box class="step" :min="1" :max="100" :value="item.quantity" :index="index" @eventChange="numberChange"></uni-number-box>
+						</view>
+						<text class="del-btn yticon icon-fork" @click="handleDeleteCartItem(index)"></text>
+					</view>
+				</block>
+			</view>
 			<!-- 底部菜单栏 -->
 			<view class="action-section">
 				<view class="checkbox">
