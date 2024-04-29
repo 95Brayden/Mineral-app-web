@@ -40,10 +40,7 @@
 						清空
 					</view>
 				</view>
-				<view class="total-box">
-					<text class="price">¥{{total}}元</text>
-				</view>
-				<button type="primary" class="no-border confirm-btn" @click="createOrder">去结算</button>
+				
 			</view>
 		</view>
 	</view>
