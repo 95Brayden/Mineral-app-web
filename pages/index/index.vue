@@ -142,25 +142,7 @@
 		</view>
 
 		<!-- 猜你喜欢-->
-		<view class="f-header m-t">
-			<image src="/static/icon_recommend_product.png"></image>
-			<view class="tit-box">
-				<text class="tit">猜你喜欢</text>
-				<text class="tit2">你喜欢的都在这里了</text>
-			</view>
-			<text class="yticon icon-you" v-show="false"></text>
-		</view>
-
-		<view class="guess-section">
-			<view v-for="(item, index) in recommendProductList" :key="index" class="guess-item" @click="navToDetailPage(item)">
-				<view class="image-wrapper">
-					<image :src="item.pic" mode="aspectFill"></image>
-				</view>
-				<text class="title clamp">{{item.name}}</text>
-				<text class="title2 clamp">{{item.subTitle}}</text>
-				<text class="price">￥{{item.price}}</text>
-			</view>
-		</view>
+		
 		<uni-load-more :status="loadingType"></uni-load-more>
 	</view>
 </template>
