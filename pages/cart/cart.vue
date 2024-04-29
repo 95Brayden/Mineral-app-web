@@ -26,7 +26,7 @@
 							<text class="clamp title">{{item.productName}}</text>
 							<text class="attr">{{item.spDataStr}}</text>
 							<text class="price">¥{{item.price}}</text>
-							<uni-number-box class="step" :min="1" :max="100" :value="item.quantity" :index="index" @eventChange="numberChange"></uni-number-box>
+							
 						</view>
 						<text class="del-btn yticon icon-fork" @click="handleDeleteCartItem(index)"></text>
 					</view>
