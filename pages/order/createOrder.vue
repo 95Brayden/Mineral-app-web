@@ -87,38 +87,7 @@
 			</view>
 		</view>
 
-		<!-- 底部 -->
-		<view class="footer">
-			<view class="price-content">
-				<text>实付款</text>
-				<text class="price-tip">￥</text>
-				<text class="price">{{calcAmount.payAmount}}</text>
-			</view>
-			<text class="submit" @click="submit">提交订单</text>
-		</view>
-
-		<!-- 优惠券面板 -->
-		<view class="mask" :class="maskState===0 ? 'none' : maskState===1 ? 'show' : ''" @click="toggleMask">
-			<view class="mask-content" @click.stop.prevent="stopPrevent">
-				<!-- 优惠券页面，仿mt -->
-				<view class="coupon-item" v-for="(item,index) in couponList" :key="index" @click="selectCoupon(item)">
-					<view class="con">
-						<view class="left">
-							<text class="title">{{item.name}}</text>
-							<text class="time">有效期至{{item.endTime | formatDateTime}}</text>
-						</view>
-						<view class="right">
-							<text class="price">{{item.amount}}</text>
-							<text>满{{item.minPoint}}可用</text>
-						</view>
-
-						<view class="circle l"></view>
-						<view class="circle r"></view>
-					</view>
-					<text class="tips">{{item.useType | formatCouponUseType}}</text>
-				</view>
-			</view>
-		</view>
+		
 
 	</view>
 </template>
