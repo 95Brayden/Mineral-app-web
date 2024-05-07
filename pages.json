@@ -279,6 +279,22 @@
 					}
 				}
 			}
+		},
+		{
+			"path" : "pages/search/search",
+			"style" : 
+			{
+				"navigationBarTitleText" : "搜索",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/start/start",
+			"style" : 
+			{
+				"navigationBarTitleText" : "启动页",
+				"enablePullDownRefresh" : false
+			}
 		}
 	],
 	"globalStyle": {
