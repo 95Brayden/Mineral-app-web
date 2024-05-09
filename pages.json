@@ -88,7 +88,18 @@
 					"animationType": "slide-in-bottom"
 				}
 			}
-		}, {
+		},
+		{
+			"path": "pages/public/forget",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false,
+					"animationType": "slide-in-bottom"
+				}
+			}
+		},{
 			"path": "pages/user/user",
 			"style": {
 				"navigationBarTitleText": "我的",
@@ -310,14 +321,6 @@
 			"style" : 
 			{
 				"navigationBarTitleText" : "微信注册",
-				"enablePullDownRefresh" : false
-			}
-		},
-		{
-			"path" : "pages/public/forget",
-			"style" : 
-			{
-				"navigationBarTitleText" : "忘记密码",
 				"enablePullDownRefresh" : false
 			}
 		},
