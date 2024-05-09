@@ -4,7 +4,7 @@
 		<view class="back-btn yticon icon-zuojiantou-up" @click="navBack"></view>
 		<view class="right-top-sign"></view>
 		<!-- 设置白色背景防止软键盘把下部绝对定位元素顶上来盖住输入框等 -->
-		<view class="wrapper">
+		<view class="login-wrapper">
 			<view class="left-top-sign">REGISTER</view>
 			<view class="welcome">
 				欢迎注册！
@@ -37,7 +37,7 @@
 					<input type="text" v-model="authCode" placeholder="请输入验证码" maxlength="11"/>
 				</view>
 			</view>
-			<button class="confirm-btn" @click="toRegister" :disabled="registering">注册</button>
+			<button class="confirm-btn2" @click="toRegister" :disabled="registering">注册</button>
 		</view>
 		<view class="register-section">
 			<text @click="toWeChat">微信注册</text>
@@ -171,89 +171,33 @@
 		position: relative;
 		width: 100vw;
 		height: 100vh;
-		overflow: hidden;
-		background: #fff;
-	}
-
-	.wrapper {
-		position: relative;
-		z-index: 90;
-		background: #fff;
-		padding-bottom: 40upx;
-	}
-
-	.back-btn {
-		position: absolute;
-		left: 40upx;
-		z-index: 9999;
-		padding-top: var(--status-bar-height);
-		top: 40upx;
-		font-size: 40upx;
-		color: $font-color-dark;
-	}
-
-	.left-top-sign {
-		font-size: 120upx;
-		color: $page-color-base;
-		position: relative;
-		left: -16upx;
-	}
-
-	.right-top-sign {
-		position: absolute;
-		top: 80upx;
-		right: -30upx;
-		z-index: 95;
-
-		&:before,
-		&:after {
-			display: block;
-			content: "";
-			width: 400upx;
-			height: 80upx;
-			background: #b4f3e2;
-		}
-
-		&:before {
-			transform: rotate(50deg);
-			border-radius: 0 50px 0 0;
-		}
-
-		&:after {
-			position: absolute;
-			right: -198upx;
-			top: 0;
-			transform: rotate(-50deg);
-			border-radius: 50px 0 0 0;
-			/* background: pink; */
-		}
-	}
-
-	.left-bottom-sign {
-		position: absolute;
-		left: -270upx;
-		bottom: -320upx;
-		border: 100upx solid #d0d1fd;
-		border-radius: 50%;
-		padding: 180upx;
-	}
-	
-	.container {
+		background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
 		padding-top: 115px;
 		position: relative;
 		width: 100vw;
 		height: 100vh;
 		overflow: hidden;
-		background: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
-	
+
+	.login-wrapper {
+	        background-color: #fff;
+	        width: 500px;
+	        height: 600px;
+	        border-radius: 15px;
+	        padding: 0 50px;
+	        font-family: sans-serif;
+	    }
+		
 	.wrapper {
 		position: relative;
 		z-index: 90;
 		background: #fff;
 		padding-bottom: 40upx;
 	}
-	
+
 	.back-btn {
 		position: absolute;
 		left: 40upx;
@@ -263,20 +207,20 @@
 		font-size: 40upx;
 		color: $font-color-dark;
 	}
-	
+
 	.left-top-sign {
 		font-size: 120upx;
 		color: $page-color-base;
 		position: relative;
 		left: -16upx;
 	}
-	
+
 	.right-top-sign {
 		position: absolute;
 		top: 80upx;
 		right: -30upx;
 		z-index: 95;
-	
+
 		&:before,
 		&:after {
 			display: block;
@@ -285,12 +229,12 @@
 			height: 80upx;
 			background: #b4f3e2;
 		}
-	
+
 		&:before {
 			transform: rotate(50deg);
 			border-radius: 0 50px 0 0;
 		}
-	
+
 		&:after {
 			position: absolute;
 			right: -198upx;
@@ -300,7 +244,7 @@
 			/* background: pink; */
 		}
 	}
-	
+
 	.left-bottom-sign {
 		position: absolute;
 		left: -270upx;
@@ -390,19 +334,17 @@
 		}
 	}
 	
-	.confirm-btn2 {
-		width: 630upx;
-		height: 76upx;
-		line-height: 76upx;
-		border-radius: 50px;
-		margin-top: 40upx;
-		background: $uni-color-primary;
+	.confirm-btn2{
+		text-align: center;
+		width: 500upx;
+		margin-top: 40px;
+		background-image: linear-gradient(to right, #a6c1ee, #fbc2eb);
 		color: #fff;
-		font-size: $font-lg;
-	
-		&:after {
-			border-radius: 100px;
-		}
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 18px;
+		justify-content: center;
 	}
 	
 	.forget-section {
