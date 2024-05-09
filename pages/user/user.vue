@@ -1,8 +1,8 @@
 <template>  
     <view class="container">  
-		
+	
 		<view class="user-section">
-			<image class="bg" src="/static/user-bg.jpg"></image>
+				<image class="bg" src="/static/user-bg.jpg"></image>
 			<view class="user-info-box">
 				<view class="portrait-box">
 					<image class="portrait" :src="userInfo.icon || '/static/missing-face.png'"></image>
@@ -222,8 +222,8 @@
 			top: 0;
 			width: 100%;
 			height: 100%;
-			filter: blur(1px);
-			opacity: .7;
+			/* filter: blur(1px); */
+			opacity: .9;
 		}
 	}
 	.user-info-box{
