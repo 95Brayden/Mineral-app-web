@@ -46,6 +46,7 @@
 </template>
 
 <script>
+	import axios from 'axios';
 	import {
 		mapMutations
 	} from 'vuex';
@@ -59,6 +60,7 @@
 				password: '',
 				telephone: '',
 				authCode:'',
+				repassword: '',
 				registering: false,
 				countdown: 0,
 				timer: null
@@ -78,9 +80,16 @@
 			navBack() {
 				uni.navigateBack();
 			},
-			 sendVerificationCode() {
-			            // 在这里处理发送验证码的逻辑，示例中直接触发倒计时
-			            this.countdown = 60;
+			sendVerificationCode() {
+			        // 发送请求到后端接口
+					console.log("Sending verification code...");
+			        axios.get('/getAuthCode', {
+			            params: {
+			                telephone: this.telephone // 传递手机号作为参数
+			            }
+			        }).then(response => {
+			            // 请求成功处理逻辑
+			            this.countdown = 60; // 开始倒计时
 			            this.timer = setInterval(() => {
 			                if (this.countdown > 0) {
 			                    this.countdown--;
@@ -89,7 +98,12 @@
 			                    this.timer = null;
 			                }
 			            }, 1000);
-			},
+			            console.log('验证码已发送：', response.data);
+			        }).catch(error => {
+			            // 请求失败处理逻辑
+			            console.error('发送验证码失败：', error);
+			        });
+			    },
 			async toRegister() {
 				this.registering = true;
 				memberRegister({
@@ -121,10 +135,6 @@
 	page {
 		background: #fff;
 	}
-	
-	
-	
-	
 	
 	.empty {
 		position: fixed;
