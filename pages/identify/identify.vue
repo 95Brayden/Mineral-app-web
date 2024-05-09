@@ -1,4 +1,4 @@
-<template>
+<!-- /* <template>
 	<div class="container">
 		<div class="appraisal-form">
 		  <h2>珠宝鉴定</h2>
@@ -9,7 +9,7 @@
 		      <option value="necklace">项链</option>
 		      <option value="ring">戒指</option>
 		      <option value="bracelet">手链</option>
-		      <!-- 其他珠宝类型 -->
+		      <!-- 其他珠宝类型
 		    </select>
 		  </div>
 		  <div class="input-group">
@@ -25,7 +25,7 @@
 		    <div class="checkboxes">
 		      <label><input type="checkbox" v-model="appraisalTypes['gemstone']"> 宝石</label>
 		      <label><input type="checkbox" v-model="appraisalTypes['metal']"> 金属</label>
-		      <!-- 其他鉴定类型 -->
+		      <!-- 其他鉴定类型
 		    </div>
 		  </div>
 		  <button @click="submitAppraisal" class="btn btn-primary">提交鉴定</button>
@@ -116,9 +116,10 @@ export default {
 }
 
 .container {
-  background-image: url('~@/static/bg.jpg'); /* 你的背景图片路径 */
-  background-size: cover; /* 指定背景图片尺寸，cover 表示尽量填充容器 */
-  background-position: center; /* 指定背景图片位置，居中 */
-  /* 其他样式 */
+  background-image: url('~@/static/bg.jpg');
+  background-size: cover; 
+  background-position: center; 
+  height:100vh;
+  weight:100vw;
 }
 </style>
