@@ -4,7 +4,7 @@
 		<view class="back-btn yticon icon-zuojiantou-up" @click="navBack"></view>
 		<view class="right-top-sign"></view>
 		<!-- 设置白色背景防止软键盘把下部绝对定位元素顶上来盖住输入框等 -->
-		<view class="wrapper">
+		<view class="login-wrapper">
 			<view class="left-top-sign">LOGIN</view>
 			<view class="welcome">
 				欢迎回来！
@@ -20,15 +20,16 @@
 					 password @confirm="toLogin" />
 				</view>
 			</view>
-			<button class="confirm-btn" @click="toLogin" :disabled="logining">登录</button>
+			<button class="confirm-btn2" @click="toLogin" :disabled="logining">登录</button>
 			<view class="forget-section" @click="toForget">
 				忘记密码?
 			</view>
+			<view class="register-section">
+				还没有账号?
+				<text @click="toRegist()">马上注册</text>
+			</view>
 		</view>
-		<view class="register-section">
-			还没有账号?
-			<text @click="toRegist()">马上注册</text>
-		</view>
+		
 	</view>
 </template>
 
@@ -91,13 +92,25 @@
 	}
 
 	.container {
+		background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
 		padding-top: 115px;
 		position: relative;
 		width: 100vw;
 		height: 100vh;
 		overflow: hidden;
-		background: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
+
+	.login-wrapper {
+	        background-color: #fff;
+	        width: 500px;
+	        height: 588px;
+	        border-radius: 15px;
+	        padding: 0 50px;
+	        font-family: sans-serif;
+	    }
 
 	.wrapper {
 		position: relative;
@@ -174,6 +187,7 @@
 	.input-content {
 		padding: 0 60upx;
 	}
+	
 
 	.input-item {
 		display: flex;
@@ -182,7 +196,7 @@
 		justify-content: center;
 		padding: 0 30upx;
 		background: $page-color-light;
-		height: 120upx;
+		height: 100upx;
 		border-radius: 4px;
 		margin-bottom: 50upx;
 
@@ -206,7 +220,7 @@
 	}
 
 	.confirm-btn {
-		width: 630upx;
+		width: 500px;
 		height: 76upx;
 		line-height: 76upx;
 		border-radius: 50px;
@@ -220,19 +234,17 @@
 		}
 	}
 	
-	.confirm-btn2 {
-		width: 630upx;
-		height: 76upx;
-		line-height: 76upx;
-		border-radius: 50px;
-		margin-top: 40upx;
-		background: $uni-color-primary;
+	.confirm-btn2{
+		text-align: center;
+		width: 500upx;
+		margin-top: 40px;
+		background-image: linear-gradient(to right, #a6c1ee, #fbc2eb);
 		color: #fff;
-		font-size: $font-lg;
-	
-		&:after {
-			border-radius: 100px;
-		}
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 18px;
+		justify-content: center;
 	}
 
 	.forget-section {
