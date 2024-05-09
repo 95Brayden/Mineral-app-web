@@ -21,14 +21,13 @@
 				</view>
 			</view>
 			<button class="confirm-btn" @click="toLogin" :disabled="logining">登录</button>
-			<button class="confirm-btn2" @click="toRegist" >获取体验账号</button>
-			<view class="forget-section" @click="toRegist">
+			<view class="forget-section" @click="toForget">
 				忘记密码?
 			</view>
 		</view>
 		<view class="register-section">
 			还没有账号?
-			<text @click="toRegist">马上注册</text>
+			<text @click="toRegist()">马上注册</text>
 		</view>
 	</view>
 </template>
@@ -59,6 +58,9 @@
 			},
 			toRegist() {
 				uni.navigateTo({url:'/pages/public/register'});
+			},
+			toForget() {
+				uni.navigateTo({url:'/pages/public/forget'});
 			},
 			async toLogin() {
 				this.logining = true;
