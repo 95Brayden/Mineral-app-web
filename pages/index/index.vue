@@ -32,12 +32,12 @@
 				<text>购买</text>
 			</view>
 			<view class="cate-item">
-				<image src="/static/temp/c5.png" @click="navToStart()"></image>
-				<text>(暂为启动页)</text>
+				<image src="/static/temp/c5.png" @click="navToAuction()"></image>
+				<text>每日金价</text>
 			</view>
 			<view class="cate-item">
-				<image src="/static/temp/c6.png" @click="navToIdentify()"></image>
-				<text>鉴定</text>
+				<image src="/static/temp/c6.png" @click="navToCategory()"></image>
+				<text>分类</text>
 			</view>
 			<view class="cate-item">
 				<image src="/static/temp/c7.png" @click="navToRecovery()"></image>
@@ -333,6 +333,12 @@
 			navToAuction() {
 				uni.navigateTo({
 					url: `/pages/auction/auction`
+				})
+			},
+			//分类
+			navToCategory() {
+				uni.navigateTo({
+					url: `/pages/category/category`
 				})
 			},
 			//回收
