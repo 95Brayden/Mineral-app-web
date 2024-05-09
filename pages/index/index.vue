@@ -2,8 +2,8 @@
 	<view class="container">
 		<!-- 小程序头部兼容 -->
 		<!-- #ifdef MP -->
-		<view class="mp-search-box">
-			<input class="ser-input" type="text" value="请输入关键字搜索" disabled />
+		<view class="mp-search-box"  >
+			<input class="ser-input" @click="onNavigationBarSearchInputClick()" type="text" value="输入关键字搜索" disabled />
 		</view>
 		<!-- #endif -->
 
@@ -27,30 +27,30 @@
 		</view>
 		<!-- 头部功能区 -->
 		<view class="cate-section">
-			<view class="cate-item">
+			<view class="cate-item" @click="navToCommodityList()">
 				<image src="/static/temp/c3.png"></image>
 				<text>购买</text>
 			</view>
 			<view class="cate-item">
-				<image src="/static/temp/c5.png"></image>
+				<image src="/static/temp/c5.png" @click="navToStart()"></image>
+				<text>(暂为启动页)</text>
+			</view>
+			<view class="cate-item">
+				<image src="/static/temp/c6.png" @click="navToIdentify()"></image>
+				<text>鉴定</text>
+			</view>
+			<view class="cate-item">
+				<image src="/static/temp/c7.png" @click="navToRecovery()"></image>
 				<text>回收</text>
 			</view>
-			<view class="cate-item">
-				<image src="/static/temp/c6.png"></image>
-				<text>拍卖</text>
-			</view>
-			<view class="cate-item">
-				<image src="/static/temp/c7.png"></image>
-				<text>分类</text>
-			</view>
 		</view>
-
+		
 		<!-- 品牌制造商直供 -->
 		<view class="f-header m-t" @click="navToRecommendBrandPage()">
 			<image src="/static/icon_home_brand.png"></image>
 			<view class="tit-box">
-				<text class="tit">地大直供</text>
-				<text class="tit2">鉴定保障</text>
+				<text class="tit">地大珠宝特供</text>
+				<!-- <text class="tit2">工厂直达消费者，剔除品牌溢价</text> -->
 			</view>
 			<text class="yticon icon-you"></text>
 		</view>
@@ -84,7 +84,7 @@
 			</view>
 			<text class="yticon icon-you" v-show="false"></text>
 		</view>
-		
+
 		<view class="guess-section">
 			<view v-for="(item, index) in homeFlashPromotion.productList" :key="index" class="guess-item" @click="navToDetailPage(item)">
 				<view class="image-wrapper">
@@ -95,7 +95,7 @@
 				<text class="price">￥{{item.price}}</text>
 			</view>
 		</view>
-		
+
 		<!-- 新鲜好物 -->
 		<view class="f-header m-t" @click="navToNewProudctListPage()">
 			<image src="/static/icon_new_product.png"></image>
@@ -150,7 +150,7 @@
 			</view>
 			<text class="yticon icon-you" v-show="false"></text>
 		</view>
-		
+
 		<view class="guess-section">
 			<view v-for="(item, index) in recommendProductList" :key="index" class="guess-item" @click="navToDetailPage(item)">
 				<view class="image-wrapper">
@@ -317,14 +317,51 @@
 					url: `/pages/product/hotProductList`
 				})
 			},
+			//搜索商品列表
+			navToCommodityList() {
+				uni.navigateTo({
+					url: `/pages/commodityList/commodityList`
+				})
+			},
+			//启动页
+			navToStart() {
+				uni.navigateTo({
+					url: `/pages/start/start`
+				})
+			},
+			//拍卖
+			navToAuction() {
+				uni.navigateTo({
+					url: `/pages/auction/auction`
+				})
+			},
+			//回收
+			navToRecovery() {
+				uni.navigateTo({
+					url: `/pages/recovery/recovery`
+				})
+			},
+			//鉴定
+			navToIdentify() {
+				uni.navigateTo({
+					url: `/pages/identify/identify`
+				})
+			},
+			//搜索
+			onNavigationBarSearchInputClicked() {
+				uni.navigateTo({
+					url: '/pages/search/search'
+				})
+			},
 		},
 		// #ifndef MP
 		// 标题栏input搜索框点击
-		onNavigationBarSearchInputClicked: async function(e) {
+		onNavigationBarSearchInputClicked: function(e) {
 			uni.navigateTo({
 				url: '/pages/search/search'
 			})
 		},
+
 		//点击导航栏 buttons 时触发
 		onNavigationBarButtonTap(e) {
 			const index = e.index;
