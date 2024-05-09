@@ -34,7 +34,7 @@
 					
 				</view>
 				<view class="input-item">
-					<input type="text" v-model="authCode" placeholder="请输入验证码" maxlength="11"/>
+					<input type="text" v-model="authCode" placeholder="请输入验证码" maxlength="6"/>
 				</view>
 			</view>
 			<button class="confirm-btn2" @click="toRegister" :disabled="registering">注册</button>
