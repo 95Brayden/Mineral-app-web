@@ -1,5 +1,6 @@
 {
 	"pages": [
+		
 
 		{
 			"path": "pages/index/index",
@@ -281,6 +282,14 @@
 			}
 		},
 		{
+			"path" : "pages/start/start",
+			"style" : 
+			{
+				"navigationBarTitleText" : "启动页",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
 			"path" : "pages/search/search",
 			"style" : 
 			{
@@ -289,13 +298,54 @@
 			}
 		},
 		{
-			"path" : "pages/start/start",
+			"path" : "pages/commodityList/commodityList",
 			"style" : 
 			{
-				"navigationBarTitleText" : "启动页",
+				"navigationBarTitleText" : "商品列表",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/public/wechat",
+			"style" : 
+			{
+				"navigationBarTitleText" : "微信注册",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/public/forget",
+			"style" : 
+			{
+				"navigationBarTitleText" : "忘记密码",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/auction/auction",
+			"style" : 
+			{
+				"navigationBarTitleText" : "拍卖",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/recovery/recovery",
+			"style" : 
+			{
+				"navigationBarTitleText" : "回收",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/identify/identify",
+			"style" : 
+			{
+				"navigationBarTitleText" : "鉴定",
 				"enablePullDownRefresh" : false
 			}
 		}
+		
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
