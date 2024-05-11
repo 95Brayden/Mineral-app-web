@@ -46,7 +46,7 @@
 						</view>
 						<view class="action-box b-t" v-if="item.status == 3">
 							<button class="action-btn" >评价商品</button>
-							<button class="action-btn" >退款回收</button>
+							<button class="action-btn recom" @click="refundOrder(item.id)">退款回收</button>
 						</view>
 					</view>
 
@@ -214,6 +214,27 @@
 				uni.showModal({
 				    title: '提示',
 				    content: '是否要删除该订单？',
+				    success: function (res) {
+				        if (res.confirm) {
+				            uni.showLoading({
+				            	title: '请稍后'
+				            })
+				            deleteUserOrder({orderId:orderId}).then(response=>{
+				            	uni.hideLoading();
+				            	superThis.loadData();
+				            });
+				        } else if (res.cancel) {
+				            console.log('用户点击取消');
+				        }
+				    }
+				});
+			},
+			//退款
+			refundOrder(orderId) {
+				let superThis = this;
+				uni.showModal({
+				    title: '提示',
+				    content: '是否要退款回收？',
 				    success: function (res) {
 				        if (res.confirm) {
 				            uni.showLoading({
