@@ -339,21 +339,6 @@
 				"navigationBarTitleText" : "鉴定",
 				"enablePullDownRefresh" : false
 			}
-		},
-		{
-			"path" : "pages/recovery/recovery",
-			"style" : 
-			{
-				"navigationBarTitleText" : "swiper-sticky"
-			}
-		},
-		{
-			"path" : "pages/recovery/recovery",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
 		}
 		
 	],
