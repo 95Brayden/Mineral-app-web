@@ -14,7 +14,7 @@
 			<!-- 背景色区域 -->
 			<view class="titleNview-background" :style="{backgroundColor:titleNViewBackground}"></view>
 			<swiper class="carousel" circular @change="swiperChange">
-				<swiper-item v-for="(item, index) in advertiseList" :key="index" class="carousel-item" @click="navToAdvertisePage(item)">
+				<swiper-item v-for="(item, index) in advertiseList2" :key="index" class="carousel-item" @click="navToAdvertisePage(item)">
 					<image :src="item.pic" />
 				</swiper-item>
 			</swiper>
@@ -187,6 +187,13 @@
 				carouselList: [],
 				goodsList: [],
 				advertiseList: [],
+				advertiseList2: [
+					{ pic: '/static/carousel/carousel1.jpg' },
+					{ pic: '/static/carousel/carousel2.png' },
+					{ pic: '/static/carousel/carousel3.png' },
+					{ pic: '/static/carousel/cartier.png' },
+					{ pic: '/static/carousel/gold.jpg' },
+				],
 				brandList: [],
 				homeFlashPromotion: [],
 				newProductList: [],
