@@ -45,7 +45,8 @@
 							<button class="action-btn recom" @click="receiveOrder(item.id)">确认收货</button>
 						</view>
 						<view class="action-box b-t" v-if="item.status == 3">
-							<button class="action-btn recom" >评价商品</button>
+							<button class="action-btn" >评价商品</button>
+							<button class="action-btn" >退款回收</button>
 						</view>
 					</view>
 
