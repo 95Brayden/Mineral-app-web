@@ -27,8 +27,8 @@
 		</view>
 		<!-- 头部功能区 -->
 		<view class="cate-section">
-			<view class="cate-item" @click="navToCommodityList()">
-				<image src="/static/temp/c3.png"></image>
+			<view class="cate-item">
+				<image src="/static/temp/c3.png" @click="navToStart()"></image>
 				<text>购买</text>
 			</view>
 			<view class="cate-item">
@@ -36,8 +36,8 @@
 				<text>每日金价</text>
 			</view>
 			<view class="cate-item">
-				<image src="/static/temp/c6.png" @click="navToCategory()"></image>
-				<text>分类</text>
+				<image src="/static/temp/c6.png" @click="navToAttention()"></image>
+				<text>店铺</text>
 			</view>
 			<view class="cate-item">
 				<image src="/static/temp/c7.png" @click="navToRecovery()"></image>
@@ -326,8 +326,9 @@
 			},
 			//搜索商品列表
 			navToCommodityList() {
+				console.log("run")
 				uni.navigateTo({
-					url: `/pages/commodityList/commodityList`
+					url: `pages/productList/productList`
 				})
 			},
 			//启动页
@@ -346,6 +347,12 @@
 			navToCategory() {
 				uni.navigateTo({
 					url: `/pages/category/category`
+				})
+			},
+			//店铺
+			navToAttention() {
+				uni.navigateTo({
+					url: `/pages/user/brandAttention`
 				})
 			},
 			//回收
