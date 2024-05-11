@@ -5,6 +5,7 @@ const http = new Request()
 
 http.setConfig((config) => { /* 设置全局配置 */
 	config.baseUrl = API_BASE_URL /* 根域名不同 */
+	// config.baseUrl="https://portal-api.macrozheng.com"
 	config.header = {
 		...config.header
 	}
