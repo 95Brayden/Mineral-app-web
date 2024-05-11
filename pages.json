@@ -296,8 +296,8 @@
 			"path" : "pages/start/start",
 			"style" : 
 			{
-				"navigationBarTitleText" : "启动页",
-				"enablePullDownRefresh" : false
+				"navigationBarTitleText" : "商品列表",
+				"enablePullDownRefresh" : true
 			}
 		},
 		{
@@ -305,14 +305,6 @@
 			"style" : 
 			{
 				"navigationBarTitleText" : "搜索",
-				"enablePullDownRefresh" : false
-			}
-		},
-		{
-			"path" : "pages/commodityList/commodityList",
-			"style" : 
-			{
-				"navigationBarTitleText" : "商品列表",
 				"enablePullDownRefresh" : false
 			}
 		},
@@ -361,6 +353,14 @@
 			{
 				"navigationBarTitleText" : "",
 				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/productList/productList",
+			"style" : 
+			{
+				"enablePullDownRefresh" : true,
+				"navigationBarTitleText" : "商品列表"
 			}
 		}
 		
