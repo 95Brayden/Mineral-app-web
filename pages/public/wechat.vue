@@ -6,9 +6,9 @@
 		<!-- 设置白色背景防止软键盘把下部绝对定位元素顶上来盖住输入框等 -->
 		<view class="wrapper">
 			<view class="empty">
-				<image src="/static/mypay.jpg" mode="aspectFit"></image>
+				<image src="/static/wechatlogin.png" mode="aspectFit"></image>
 				<view class="empty-tips">
-					扫描上方二维码<view class="navigator">微信登录</view>，
+					扫描上方二维码<view class="navigator">微信注册</view>，
 				</view>
 			</view>
 		</view>
