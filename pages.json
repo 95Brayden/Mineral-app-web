@@ -339,6 +339,14 @@
 				"navigationBarTitleText" : "鉴定",
 				"enablePullDownRefresh" : false
 			}
+		},
+		{
+			"path" : "pages/start/searchfalse",
+			"style" : 
+			{
+				"navigationBarTitleText" : "商品列表",
+				"enablePullDownRefresh" : false
+			}
 		}
 		
 	],
