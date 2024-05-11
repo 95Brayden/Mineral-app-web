@@ -51,7 +51,7 @@
 				recommendProductList: [],
 				recommendParams: {
 					pageNum: 1,
-					pageSize: 4
+					pageSize: 8
 				},
 				loadingType:'more'
 			};
