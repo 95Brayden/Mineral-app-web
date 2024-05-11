@@ -1,33 +1,27 @@
-
 <template>
     <view class="content" v-if="seen">
-
         <form @submit="formSubmit" @reset="formReset">
-
             <view class="inputView">
                 <text class="leftTitle">物品简介</text>
             </view>
-
-            <textarea class="rightTextarea" name="direct" placeholder=" 请输入物品简介" />
-
+            <textarea class="rightTextarea" name="direct" placeholder=" 请输入物品简介"></textarea>
             <view class="inputView">
                 <text class="leftTitle">物品规格</text>
             </view>
-
-            <textarea class="rightTextarea" name="village" placeholder=" 请输入物品规格" />
-
+            <textarea class="rightTextarea" name="village" placeholder=" 请输入物品规格"></textarea>
             <view class="inputView">
                 <text class="leftTitle">添加证明及物品图片（仅可添加1张）</text>
-
             </view>
-
+            <!-- 修改这里，使用image标签显示已选择的图片 -->
+            <image v-if="photoList.length > 0" :src="photoList[0].filePath" mode="aspectFit" style="width: 100px; height: 100px;"></image>
             <!-- photoList：选择的图片数组  @click：图片选择事件-->
-            <cc-oneImgFileUpload :photoList="photoList" @click="addPhotoClick"></cc-oneImgFileUpload>
+            <cc-oneImgFileUpload :photoList="photoList" @click="addPhotoClick">
+				<view class="input-btn">添加图片</view>
 
+			</cc-oneImgFileUpload>
             <view class="uni-btn-v">
                 <button class="botBtn" type="primary" form-type="submit">提交</button>
                 <view class="tipText"> 注意事项: 请确保您填写的信息真实无误 </view>
-
             </view>
         </form>
     </view>
@@ -213,4 +207,9 @@
         margin-bottom: 36px;
         font-size: 28rpx;
     }
+	.input-btn{
+		background: skyblue;
+		width:170upx;
+		margin-left: auto;
+	}
 </style>
