@@ -8,7 +8,7 @@
 					<image class="pic" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556465765776&di=57bb5ff70dc4f67dcdb856e5d123c9e7&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01fd015aa4d95fa801206d96069229.jpg%401280w_1l_2o_100sh.jpg"></image>
 				</view>
 				<text class="introduce">
-					虽然做了一件好事，但很有可能因此招来他人的无端猜测，例如被质疑是否藏有其他利己动机等，乃至谴责。即便如此，还是要做好事。
+					中国地质大学周年庆活动，鉴定保障，惊喜连连，等你来购。
 				</text>
 				<view class="bot b-t">
 					<text>查看详情</text>
