@@ -181,6 +181,12 @@
 						url:`/pages/brand/brandDetail?id=${id}`
 					})
 				}
+					
+				else{
+					uni.navigateTo({
+						url:`/pages/start/searchfalse`
+					})
+				}
 				
 				//以下是示例跳转淘宝搜索，可自己实现搜索逻辑
 				/*
