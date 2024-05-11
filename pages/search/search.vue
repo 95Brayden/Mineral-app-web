@@ -2,16 +2,8 @@
 	<view class="content">
 		<view class="search-box">
 			<!-- mSearch组件 如果使用原样式，删除组件元素-->
-			<mSearch class="mSearch-input-box" :mode="2" button="inside" :placeholder="defaultKeyword" @search="doSearch(false)" @input="inputChange" @confirm="doSearch(false)" v-model="keyword"></mSearch>
-			<!-- 原样式 如果使用原样式，恢复下方注销代码 -->
-			<!-- 						
-			<view class="input-box">
-				<input type="text" :adjust-position="true" :placeholder="defaultKeyword" @input="inputChange" v-model="keyword" @confirm="doSearch(false)"
-				 placeholder-class="placeholder-class" confirm-type="search">
-			</view>
-			<view class="search-btn" @tap="doSearch(false)">搜索</view> 
-			 -->
-			<!-- 原样式 end -->
+			<mSearch class="mSearch-input-box" :mode="2" button="inside" :placeholder="defaultKeyword" @search="doSearch(false)"  @confirm="doSearch(false)" v-model="keyword"></mSearch>
+			
 		</view>
 		<view class="search-keyword" >
 			<scroll-view class="keyword-list-box" v-show="isShowKeywordList" scroll-y>
@@ -108,28 +100,28 @@
 			//加载热门搜索
 			loadHotKeyword() {
 				//定义热门搜索关键字，可以自己实现ajax请求数据再赋值
-				this.hotKeywordList = ['键盘', '鼠标', '显示器', '电脑主机', '蓝牙音箱', '笔记本电脑', '鼠标垫', 'USB', 'USB3.0'];
+				this.hotKeywordList = ['黄金', '周大福', '翡翠', '和田玉', '欧珀', '卡地亚','地大专栏',];
 			}, 
 			//监听输入
-			inputChange(event) {
-				//兼容引入组件时传入参数情况
-				var keyword = event.detail?event.detail.value:event;
-				if (!keyword) {
-					this.keywordList = [];
-					this.isShowKeywordList = false;
-					return;
-				}
-				this.isShowKeywordList = true;
-				//以下示例截取淘宝的关键字，请替换成你的接口
-				uni.request({
-					url: 'https://suggest.taobao.com/sug?code=utf-8&q=' + keyword, //仅为示例
-					success: (res) => {
-						this.keywordList = [];
-						this.keywordList = this.drawCorrelativeKeyword(res.data.result, keyword);
+			// inputChange(event) {
+			// 	//兼容引入组件时传入参数情况
+			// 	var keyword = event.detail?event.detail.value:event;
+			// 	if (!keyword) {
+			// 		this.keywordList = [];
+			// 		this.isShowKeywordList = false;
+			// 		return;
+			// 	}
+			// 	this.isShowKeywordList = true;
+			// 	//以下示例截取淘宝的关键字，请替换成你的接口
+			// 	uni.request({
+			// 		url: 'https://suggest.taobao.com/sug?code=utf-8&q=' + keyword, //仅为示例
+			// 		success: (res) => {
+			// 			this.keywordList = [];
+			// 			this.keywordList = this.drawCorrelativeKeyword(res.data.result, keyword);
 						
-					}
-				});
-			},
+			// 		}
+			// 	});
+			// },
 			//高亮关键字
 			drawCorrelativeKeyword(keywords, keyword) {
 				var len = keywords.length,
@@ -182,6 +174,14 @@
 					icon: 'none',
 					duration: 2000
 				});
+				
+				if(keyword==='小米'){
+					let id = 6;
+					uni.navigateTo({
+						url:`/pages/brand/brandDetail?id=${id}`
+					})
+				}
+				
 				//以下是示例跳转淘宝搜索，可自己实现搜索逻辑
 				/*
 				//#ifdef APP-PLUS
