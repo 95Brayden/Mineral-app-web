@@ -354,14 +354,6 @@
 				"navigationBarTitleText" : "",
 				"enablePullDownRefresh" : false
 			}
-		},
-		{
-			"path" : "pages/productList/productList",
-			"style" : 
-			{
-				"enablePullDownRefresh" : true,
-				"navigationBarTitleText" : "商品列表"
-			}
 		}
 		
 	],
