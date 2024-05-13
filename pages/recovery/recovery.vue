@@ -1,24 +1,62 @@
 <template>
     <view class="content" v-if="seen">
         <form @submit="formSubmit" @reset="formReset">
+			<view class="inputView">
+				
+			</view>
+			<view class="inputView">
+				<text class="leftTitle">物品类别</text>
+				<radio-group v-model="category">
+					<label class="radio select-text" for="metal">金属</label>
+					<radio id="metal" name="category" value="metal"></radio>
+					<label class="radio select-text" for="jewelry">玉石</label>
+					<radio id="jewelry" name="category" value="jewelry"></radio>
+					<label class="radio select-text" for="other">其他品类</label>
+					<radio id="other" name="category" value="other"></radio>
+				</radio-group>
+			</view>
+			<view class="inputView">
+				<text class="leftTitle">类型</text>
+				<select class="rightSelect" name="type" v-model="type">
+					<option value="type1">戒指</option>
+					<option value="type2">手链</option>
+					<option value="type3">手镯</option>
+					<option value="type2">耳饰</option>
+					<option value="type3">项链</option>
+				</select>
+			</view>
             <view class="inputView">
-                <text class="leftTitle">物品简介</text>
-            </view>
-            <textarea class="rightTextarea" name="direct" placeholder=" 请输入物品简介"></textarea>
+				<text class="leftTitle">重量</text>
+				<input class="rightInput" type="text" name="weight" placeholder="请输入重量">
+			</view>
+			<view class="inputView">
+				<text class="leftTitle">大小</text>
+				<input class="rightInput" type="text" name="size" placeholder="请输入大小">
+			</view>
+			<view class="inputView">
+				<text class="leftTitle">价格</text>
+				<input class="rightInput" type="text" name="size" placeholder="请输入价格">
+			</view>
+			<view class="inputView">
+			    <text class="leftTitle">物品简介</text>
+			</view>
+			<textarea class="rightTextarea" name="direct" placeholder=" 请输入物品简介"></textarea>
             <view class="inputView">
                 <text class="leftTitle">物品规格</text>
             </view>
             <textarea class="rightTextarea" name="village" placeholder=" 请输入物品规格"></textarea>
-            <view class="inputView">
-                <text class="leftTitle">添加证明及物品图片（仅可添加1张）</text>
-            </view>
-            <!-- 修改这里，使用image标签显示已选择的图片 -->
-            <image v-if="photoList.length > 0" :src="photoList[0].filePath" mode="aspectFit" style="width: 100px; height: 100px;"></image>
-            <!-- photoList：选择的图片数组  @click：图片选择事件-->
-            <cc-oneImgFileUpload :photoList="photoList" @click="addPhotoClick">
-				<view class="input-btn">添加图片</view>
-
-			</cc-oneImgFileUpload>
+			<view class="inputView">
+			    <text class="leftTitle">添加物品图片</text>
+			</view>
+			<view class="imgView">
+			    <!-- 修改这里，使用image标签显示已选择的图片 -->
+			    <image v-if="photoList.length > 0" :src="photoList[0].filePath" mode="aspectFit" style="width: 100px; height: 100px;"></image>
+			    <!-- photoList：选择的图片数组  @click：图片选择事件-->
+			    <cc-oneImgFileUpload :photoList="photoList" @click="addPhotoClick">
+			    	<image class="img-in" src="/static/img-in.png" @click="navToAttention()"></image>
+			    </cc-oneImgFileUpload>
+			</view>
+            
             <view class="uni-btn-v">
                 <button class="botBtn" type="primary" form-type="submit">提交</button>
                 <view class="tipText"> 注意事项: 请确保您填写的信息真实无误 </view>
@@ -154,7 +192,7 @@
     .inputView {
         flex-direction: row;
         display: flex;
-        height: 40px;
+        height: 30px;
         align-items: center;
         width: 100%;
     }
@@ -175,6 +213,10 @@
         font-size: 28rpx;
         color: #333333;
     }
+	.select-text {
+	    font-size: 28rpx;
+	    color: #333333;
+	}
 
     .rightTextarea {
 
@@ -197,6 +239,18 @@
         margin-top: 36px;
         height: 48px;
     }
+	.img-in{
+		width: 48px;
+		height: 48px;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.imgView{
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
     .tipText {
         width: 100%;
