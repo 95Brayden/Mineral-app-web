@@ -90,6 +90,18 @@
 			}
 		},
 		{
+			"path" : "pages/public/wechat",
+			"style" : 
+			{
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false,
+					"animationType": "slide-in-bottom"
+			}
+			}
+		},
+		{
 			"path": "pages/public/forget",
 			"style": {
 				"navigationBarTitleText": "",
@@ -309,14 +321,6 @@
 			}
 		},
 		{
-			"path" : "pages/public/wechat",
-			"style" : 
-			{
-				"navigationBarTitleText" : "微信注册",
-				"enablePullDownRefresh" : false
-			}
-		},
-		{
 			"path" : "pages/auction/auction",
 			"style" : 
 			{
@@ -352,7 +356,7 @@
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "mall-app-web",
+		"navigationBarTitleText": "Mineral云端矿场",
 		"navigationBarBackgroundColor": "#FFFFFF",
 		"backgroundColor": "#f8f8f8"
 	},
