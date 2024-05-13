@@ -5,7 +5,7 @@
 			<view class="content">
 				<text class="title">新品上市，全场满199减50</text>
 				<view class="img-wrapper">
-					<image class="pic" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556465765776&di=57bb5ff70dc4f67dcdb856e5d123c9e7&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01fd015aa4d95fa801206d96069229.jpg%401280w_1l_2o_100sh.jpg"></image>
+					<image class="pic" src="@/static/notice/cug-1.png"></image>
 				</view>
 				<text class="introduce">
 					中国地质大学周年庆活动，鉴定保障，惊喜连连，等你来购。
@@ -19,9 +19,9 @@
 		<view class="notice-item">
 			<text class="time">昨天 12:30</text>
 			<view class="content">
-				<text class="title">新品上市，全场满199减50</text>
+				<text class="title">周大生新品上市，全新系列</text>
 				<view class="img-wrapper">
-					<image class="pic" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3761064275,227090144&fm=26&gp=0.jpg"></image>
+					<image class="pic" src="@/static/notice/zhoudasheng.png"></image>
 					<view class="cover">
 						活动结束
 					</view>
@@ -33,16 +33,16 @@
 			</view>
 		</view>
 		<view class="notice-item">
-			<text class="time">2019-07-26 12:30</text>
+			<text class="time">2024-05-5 12:30</text>
 			<view class="content">
-				<text class="title">新品上市，全场满199减50</text>
+				<text class="title">MIKIMOTO重磅来袭</text>
 				<view class="img-wrapper">
-					<image class="pic" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1556465765776&di=57bb5ff70dc4f67dcdb856e5d123c9e7&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01fd015aa4d95fa801206d96069229.jpg%401280w_1l_2o_100sh.jpg"></image>
+					<image class="pic" src="@/static/notice/yuamu.png"></image>
 					<view class="cover">
 						活动结束
 					</view>
 				</view>
-				<text class="introduce">新品上市全场2折起，新品上市全场2折起，新品上市全场2折起，新品上市全场2折起，新品上市全场2折起</text>
+				<text class="introduce">“Praise to the Sea”系列，回归品牌诞生的起点，为海洋吟唱一曲赞歌，以精美珠宝呈现大自然多姿多彩的生命律动与无限之美。</text>
 				<view class="bot b-t">
 					<text>查看详情</text>
 					<text class="more-icon yticon icon-you"></text>
