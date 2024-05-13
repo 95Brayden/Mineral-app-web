@@ -175,7 +175,7 @@
 					duration: 2000
 				});
 				
-				if(keyword==='小米'){
+				if(keyword==='地大珠宝'){
 					let id = 6;
 					uni.navigateTo({
 						url:`/pages/brand/brandDetail?id=${id}`
