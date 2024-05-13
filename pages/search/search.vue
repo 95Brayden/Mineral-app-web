@@ -180,6 +180,170 @@
 					uni.navigateTo({
 						url:`/pages/brand/brandDetail?id=${id}`
 					})
+				}else if(keyword==='Flipped'){
+					let id = 6;
+					uni.navigateTo({
+						url:`/pages/brand/brandDetail?id=${id}`
+					})
+				}
+				else if(keyword==='梵克雅宝'){
+					let id = 65;
+					uni.navigateTo({
+						url:`/pages/brand/brandDetail?id=${id}`
+					})
+				}
+				else if(keyword==='周大生'){
+					let id = 60;
+					uni.navigateTo({
+						url:`/pages/brand/brandDetail?id=${id}`
+					})
+				}
+				else if(keyword==='AuraSparkle'){
+					let id = 67;
+					uni.navigateTo({
+						url:`/pages/brand/brandDetail?id=${id}`
+					})
+				}
+				else if(keyword==='AuraSparkle'){
+					let id = 67;
+					uni.navigateTo({
+						url:`/pages/brand/brandDetail?id=${id}`
+					})
+				}
+				
+				
+				else if(keyword==='钻戒'){
+					let sid = 62;
+					let fid =57;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='钻石戒指'){
+					let sid = 62;
+					let fid =57;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='戒指'){
+					let sid = 62;
+					let fid =57;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='钢戒'){
+					let sid = 68;
+					let fid =57;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='钛钢戒指'){
+					let sid = 68;
+					let fid =57;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='水晶戒指'){
+					let sid = 73;
+					let fid =57;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='黄金戒指'){
+					let sid = 76;
+					let fid =57;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='金戒'){
+					let sid = 76;
+					let fid =57;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='水晶手链'){
+					let sid = 65;
+					let fid =58;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='手链'){
+					let sid = 65;
+					let fid =58;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='玉石手镯'){
+					let sid = 64;
+					let fid =59;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='手镯'){
+					let sid = 64;
+					let fid =59;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='金手镯'){
+					let sid = 75;
+					let fid =59;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='水晶耳环'){
+					let sid = 66;
+					let fid =60;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='耳环'){
+					let sid = 66;
+					let fid =60;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='黄金耳环'){
+					let sid = 71;
+					let fid =60;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='心形项链'){
+					let sid = 63;
+					let fid =61;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='项链'){
+					let sid = 63;
+					let fid =61;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
+				}
+				else if(keyword==='珍珠项链'){
+					let sid = 72;
+					let fid =61;
+					uni.navigateTo({
+						url: `/pages/product/list?fid=${this.currentId}&sid=${sid}`
+					})
 				}
 					
 				else{
